@@ -143,11 +143,44 @@ var max = function(list){
   return list.sort((a, b) => b - a)[0];
 } */
 
-let str = "I like learning JS";
-function array(str) {
-  return str
-    .split(" ")
-    .map((word) => `'${word}'`)
-    .join(", ");
+/* let str = "I like learning JS";
+function spl(str) {
+  return str.split(" ");
 }
-console.log(array(str));
+console.log(spl(str)); */
+
+// quest from Codewars (done)
+function countSheeps(sheep) {
+  let counter = 0;
+
+  for (let i = 0; i < sheep.length; i++) {
+    if (sheep[i] === null || sheep[i] === undefined) {
+      return "There is wrong datatype";
+    } else if (sheep[i] === true) {
+      counter += sheep[i];
+    }
+  }
+  return counter;
+}
+
+let arr = [
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+];
+console.log(countSheeps(arr));
