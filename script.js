@@ -150,7 +150,7 @@ function spl(str) {
 console.log(spl(str)); */
 
 // quest from Codewars (done)
-function countSheeps(sheep) {
+/* function countSheeps(sheep) {
   let counter = 0;
 
   for (let i = 0; i < sheep.length; i++) {
@@ -184,3 +184,67 @@ let arr = [
   true,
 ];
 console.log(countSheeps(arr));
+ */
+
+// CALLBACK FUNCTIONS
+
+/* function iCanWriteCallbackFunction(fruit, vegetable, person) {
+  console.log(`I like ${fruit}`);
+  vegetable();
+  person();
+}
+
+iCanWriteCallbackFunction("Apples", second, third);
+
+function second() {
+  console.log("If a vegetable: pumpkin");
+}
+function third() {
+  console.log("And i love my girlfriend");
+}; */
+
+/* const myObj = {
+  name: "Josh",
+  digit: 10,
+  class: "IT",
+  colors: {
+    background: "blue",
+    border: "yellow",
+    count: 5,
+  },
+  age: 20,
+  supremacy: "On",
+  testing: {
+    grow: "up",
+    sentence: true,
+  },
+};
+
+console.log(Object.keys(myObj).length); */
+
+// Desctructuring
+/* const person = {
+  name: "John",
+  age: 20,
+  experience: "3 months",
+}
+
+function showExperience({experience, name}) {
+  return {experience, name};
+}
+console.log(showExperience(person)); */
+
+// smth with ARRAY
+/* let cities = ["KyIV", "LVIV", "KharKIv", "OdesA"];
+
+let lowCase = cities.map(city => city.toLowerCase());
+console.log(lowCase.join("\n")); */
+
+let str = "String is the boss";
+function reverse(str) {
+  if (typeof str !== "string") {
+    return "Error";
+  }
+  return str.split("").reverse().join("");
+}
+console.log(reverse(str));
