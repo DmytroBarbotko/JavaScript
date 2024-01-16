@@ -240,7 +240,8 @@ console.log(showExperience(person)); */
 let lowCase = cities.map(city => city.toLowerCase());
 console.log(lowCase.join("\n")); */
 
-let str = "String is the boss";
+// reverse function
+/* let str = "String is the boss";
 function reverse(str) {
   if (typeof str !== "string") {
     return "Error";
@@ -248,3 +249,84 @@ function reverse(str) {
   return str.split("").reverse().join("");
 }
 console.log(reverse(str));
+ */
+
+// array practice
+/* const array = [15, "digit", 29, 4, "design", true];
+let count = "";
+
+const arrSpl = arr => arr.join(", ");
+
+for(let i = 0; i < array.length; i++) {
+  count += array[i];
+}
+
+console.log(arrSpl(array));
+ */
+
+/* const array = [5, 3, 7, 12, 8];
+array.sort((a, b) => a - b);
+console.log(array);
+
+console.log(0 || NaN || false || null); */
+
+/* const testObj = {
+  name: "Jack",
+  age: 20,
+  status: "student",
+  parents: {
+    mama: "Sarah",
+    papa: "Daniel",
+  }
+}
+
+for(let key in testObj) {
+  if(typeof(testObj[key]) === "object") {
+    for(let i in testObj[key]) {
+      console.log(`Feature ${i} has value ${testObj[key][i]}`)
+    }
+  } else {
+    console.log(`Feature ${key} has value ${testObj[key]}`)
+  }
+} */
+
+/* let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  email: "john.doe@example.com",
+  address: {
+    street: "123 Main Street",
+    city: "Anytown",
+    country: "USA"
+  },
+  hobbies: ["reading", "traveling", "coding"],
+  isActive: true,
+  makeTest: function() {
+    console.log("Test method");
+  }
+};
+person.makeTest();
+console.log(Object.keys(person).length);
+ */
+// Searching an object using a loop
+/* for(let key in person) {
+  if(typeof(person[key]) === "object" || Array.isArray(person[key]) || person[key] === "boolean") {
+    for(let i in person[key]) {
+      console.log(`Feature ${i} has value ${person[key][i]}`);
+    }
+  } else {
+    console.log(`Feature ${key} has value ${person[key]}`);
+  }
+} */
+
+const newObj = {
+  car: "Mercedes",
+  method: () => {
+    console.log(this.car);
+  },
+};
+
+newObj.method();
+
+// Створіть об'єкт, у якого є властивість і стрілочна функція в якості методу, яка виводить значення цієї властивості. - Д/З
