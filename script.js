@@ -330,3 +330,138 @@ const newObj = {
 newObj.method();
 
 // Створіть об'єкт, у якого є властивість і стрілочна функція в якості методу, яка виводить значення цієї властивості. - Д/З
+
+/* const alen = (length) => {
+  if(typeof length !== "number" || length <= 0) {
+    console.log("Wrong datatype, positive number is required");
+  }
+  let volume,
+  area;
+
+  volume = length * length * length;
+  area = (length * length) * 6;
+
+  console.log(`Volume is ${volume} and area is ${area}`);
+}
+alen(5); */
+
+/* const count = (a) => {
+  return a * a;
+};
+console.log(count(3)); */
+
+/* const shopingMallData = {
+  shops: [
+    { width: 8, length: 10 },
+    { width: 12, length: 8 },
+    { width: 10, length: 8 },
+    { width: 14, length: 17 },
+    { width: 16, length: 14 },
+  ],
+  heigth: 10,
+  costs: 25,
+  budget: 30000,
+};
+
+const isBudgetEnough = (string) => {
+  let square = 0;
+  let volume = 0;
+
+  string.shops.forEach((shops) => {
+    square += shops.width * shops.length;
+  });
+  volume = string.heigth * square;
+
+  if (string.budget - volume * string.costs >= 0) {
+    return "Budget is enough";
+  } else {
+    return "Budget is to small";
+  }
+};
+
+isBudgetEnough(28000); */
+
+/* function restoreDigit(digit) {
+  if(digit !== "number") {
+    return "Wrong datatype";
+  }
+  let str = digit.toString();
+  let arr = str.split("");
+  let count = "";
+
+  for(let i = 0; i <= arr.length; i++) {
+    count += parseInt(arr[i], 10);
+  }
+}
+console.log(restoreDigit(25)); */
+
+/* const arr = [3, 2, 7, 5];
+
+console.log(arr.sort((a, b) => a - b));
+
+const digit = (num) => {
+  console.log(num);
+  return num * 2;
+}
+const func = (arr) => {
+  return arr.map(digit);
+}
+console.log(func(arr));
+ */
+
+const someValues = {
+  fruit: "Apple",
+  vegetable: "Tomato",
+  calcGrocery: (a, b) => {
+    console.log(a + b);
+  },
+  showFruit: function () {
+    console.log(this.fruit);
+  },
+  priceOfApple: (3.493).toFixed(2),
+  priceofTomato: (4.304).toFixed(2),
+  getPrice: function (productName, productQuantity) {
+    switch (productName === "Apple" || productName === "Tomato") {
+      case productName === "Apple":
+        return `${this.priceOfApple * productQuantity} €`;
+      case productName === "Tomato":
+        return `${this.priceofTomato * productQuantity} €`;
+      default:
+        return "Wrong grocery";
+    }
+    /*  if(productName === "Apple") {
+      return this.priceOfApple * productQuantity + " €";
+    } 
+    if(productName === "Tomato") {
+      return this.priceofTomato * productQuantity;
+    } */
+  },
+};
+someValues.calcGrocery(5, 5);
+someValues.showFruit();
+console.log(someValues.getPrice("Apple", 7));
+console.log(someValues.getPrice("Tomato", 4));
+
+// If else у switch case
+// округлити результат до сотень
+// Додати до ціни знак €
+// написати інтерполацію до виводу
+
+//! Написати курс валют: вводиться назва валюти(яка дається), скільки грошей у цій валюті, у що конвертувати.
+
+const exchangeBudka = {
+  EUR: 41.0,
+  USD: 39.4,
+  PLN: 15.2,
+  CFH: 50.75,
+  GBP: 47.4,
+};
+
+function calcCurrency(currancyName, moneyAmount, convertedCurrency) {
+  if (isNaN(moneyAmount) || moneyAmount <= 0) {
+    return "Type error";
+  }
+  let exchangedCurrency = (currancyName * moneyAmount) / convertedCurrency;
+  return exchangedCurrency.toFixed(2);
+}
+console.log(calcCurrency(exchangeBudka.EUR, 20, exchangeBudka.GBP));
